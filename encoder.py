@@ -1,7 +1,7 @@
 #Jason Snytte
 #Arman Rafiee
 
-class Encoder():
+class Encode():
     def __init__(self, str):
         self.str = str
         self.num_list = []
