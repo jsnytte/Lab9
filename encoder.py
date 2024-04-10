@@ -7,6 +7,7 @@ class Encode():
         self.num_list = []
         for i in self.str:
             self.num_list.append(int(i))
+        
 
 
     def encode(self):
@@ -15,6 +16,6 @@ class Encode():
             digit = i + 3
             if digit > 9:
                 digit = digit - 10
-            encoded_str += digit
-        return encoded_str
+            encoded_str += str(digit)
+        self.str = encoded_str
 
