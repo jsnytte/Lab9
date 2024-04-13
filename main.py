@@ -1,8 +1,40 @@
 # Arman Rafiee
 # Jason Snytte
 
-from encoder import Encode
-from decoder import Decode
+class Encode():
+    def __init__(self, str):
+        self.str = str
+        self.num_list = []
+        for i in self.str:
+            self.num_list.append(int(i))
+        
+
+
+    def encode(self):
+        encoded_str = ""
+        for i in self.num_list:
+            digit = i + 3
+            if digit > 9:
+                digit = digit - 10
+            encoded_str += str(digit)
+        self.str = encoded_str
+        
+        
+class Decode:
+    def __init__(self, string):
+        self.str = string
+        self.num_list = []
+        for i in string:
+            self.num_list.append(int(i))
+    
+    def decode(self):
+        decoded_string = ""
+        for i in self.num_list:
+            digit = i - 3
+            if digit < 0:
+                digit += 10
+            decoded_string += str(digit)
+        self.str = decoded_string
 
 
 while True:
